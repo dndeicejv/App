@@ -107,5 +107,6 @@ public class Insert extends Application {
         this.place = place;
         this.classs =classs;
         this.msg = msg;
+        //sfghgfd
     }
 }
