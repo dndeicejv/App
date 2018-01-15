@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.app.New_Activity"
+    tools:context="com.example.app.InsertActivity"
     android:orientation="vertical"
     android:layout_marginTop="20dp"
- >
-
+    >
     <TextView
         android:id="@+id/textView"
         android:layout_width="200dp"
@@ -21,11 +20,11 @@
 
 
     <Spinner
-        android:id="@+id/floor_spin"
+        android:id="@+id/floorspin"
         android:layout_width="300dp"
         android:layout_height="46dp"
         android:layout_marginLeft="20dp"
-    />
+        />
     <TextView
         android:id="@+id/txt1"
         android:layout_width="200dp"
@@ -38,7 +37,7 @@
 
 
     <Spinner
-        android:id="@+id/place_spin"
+        android:id="@+id/placespin"
         android:layout_width="300dp"
         android:layout_height="46dp"
         android:layout_marginLeft="20dp"
@@ -55,27 +54,30 @@
 
 
     <Spinner
-        android:id="@+id/event_spin"
+        android:id="@+id/eventspin"
         android:layout_width="300dp"
         android:layout_height="46dp"
-        android:layout_marginLeft="20dp" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="150dp">
+        android:layout_marginLeft="20dp"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
 
-</LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:id="@+id/quit"
-        android:textSize="20dp"
-        android:text="返回"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/quit_btn"
+            android:textSize="20dp"
+            android:text="返回"
+            />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -86,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/next"
+            android:id="@+id/next_btn"
             android:textSize="20dp"
             android:text="下一頁"
             />

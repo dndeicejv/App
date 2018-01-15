@@ -21,19 +21,21 @@
         android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
         android:layout_marginTop="54dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/department"
-        app:layout_constraintStart_toStartOf="@+id/department"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="31dp"
         android:text="TextView"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/department" />
 
@@ -41,9 +43,10 @@
         android:id="@+id/department"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="26dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tel"
-        app:layout_constraintStart_toStartOf="@+id/tel"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Name" />
 </android.support.constraint.ConstraintLayout>

@@ -24,9 +24,9 @@ public class User_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_user_);
         ConnectionClass connectionClass = new ConnectionClass();
 
-        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+        Insert is = (Insert) getApplicationContext();
 
-        String idpass = gv.getid();
+        String idpass = is.getUser();
 
         TextView name = (TextView)findViewById(R.id.Name);
         TextView department = (TextView)findViewById(R.id.department);

@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
        getSupportActionBar().hide();
        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
-       final GlobalVariable gv = (GlobalVariable)getApplicationContext();
+       final  Insert is = (Insert) getApplicationContext();
         connectionClass = new ConnectionClass();
         edtid  =(EditText)findViewById(R.id.id);
         edtpassword  =(EditText)findViewById(R.id.password);
@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 IntentIntegrator integrator  = new IntentIntegrator(activity);
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+
                 integrator.setPrompt("scan");
                 integrator.setCameraId(0);
                 integrator.setBeepEnabled(false);
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
                 else{
-                message = loginfun(id,password,gv);
+                message = loginfun(id,password,is);
 
                 }
                 Toast.makeText(LoginActivity.this,message, Toast.LENGTH_LONG).show();
@@ -75,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-    private  String loginfun(String id,String password,GlobalVariable gv){
+    private  String loginfun(String id,String password,Insert is){
        String message = "";
         try{
 
@@ -92,7 +93,41 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(rs.next()){
                     String idpass = rs.getString("ID");
-                    gv.setId(idpass);
+                    is.setUser(idpass);
+                    String query2 = "SELECT * FROM Employee WHERE ID ='"+idpass+"'";
+                    ResultSet rs2 = stmt.executeQuery(query2);
+                    if(rs2.next()){
+                        message = "Welcome ~"+"\t"+rs2.getString("Name");
+                    }
+                    changeactivity(idpass,rs2.getString("Name"));
+                }
+                else{
+                    message  ="Invalid Credentials";
+                }
+            }
+        }catch (Exception e) {
+            message = e.getMessage().toString();
+        }
+        return  message;
+    };
+    private  String loginfqr(String id,Insert is){
+        String message = "";
+        try{
+
+            Connection con =  connectionClass.CONN();
+            if(con==null )
+                message = "Error in Connection  with SQL server";
+            else{
+                String query  ="SELECT *  FROM Login WHERE ID = '" + id.toString()+"'";
+
+                Statement stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+
+
+
+                if(rs.next()){
+                    String idpass = rs.getString("ID");
+                    is.setUser(idpass);
                     String query2 = "SELECT * FROM Employee WHERE ID ='"+idpass+"'";
                     ResultSet rs2 = stmt.executeQuery(query2);
                     if(rs2.next()){
@@ -117,7 +152,10 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(this,"you cancelled the scanning", Toast.LENGTH_LONG).show();
             }
             else{
-                Toast.makeText(this,result.getContents(), Toast.LENGTH_LONG).show();
+                final  Insert is = (Insert) getApplicationContext();
+                String message = "";
+                message = loginfqr(result.getContents().toString(),is);
+                Toast.makeText(LoginActivity.this,message, Toast.LENGTH_LONG).show();
             }
         }
         else {

@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class ConnectionClass {
     String driver = "net.sourceforge.jtds.jdbc.Driver";
-    String url  ="jdbc:jtds:sqlserver://114.44.135.30:1433/App";
+    String url  ="jdbc:jtds:sqlserver://1.34.1.77:1433/App";
     String account  = "owner";
     String password = "owner";
 

@@ -31,7 +31,7 @@ public class Search_Activity extends AppCompatActivity {
          ArrayList<String> arrayList  =new ArrayList<String>();
         final ArrayList<String> number  =new ArrayList<String>();
         ConnectionClass connectionClass = new ConnectionClass();
-        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+        final  Insert is = (Insert) getApplicationContext();
 
         ListView src = (ListView)findViewById(R.id.src_list);
         Button quit = (Button)findViewById(R.id.quit);
@@ -39,7 +39,7 @@ public class Search_Activity extends AppCompatActivity {
 
         ArrayAdapter   adapter  =new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arrayList);
                 src.setAdapter(adapter);
-        search(connectionClass,arrayList,number,adapter,gv.getsql());
+        search(connectionClass,arrayList,number,adapter,is.getSql());
 
 
 
@@ -57,6 +57,7 @@ public class Search_Activity extends AppCompatActivity {
                 intent.setClass(Search_Activity.this,StringActivity.class);
                 startActivity(intent);
                 Search_Activity.this.finish();
+
             }
         });
 
@@ -64,7 +65,7 @@ public class Search_Activity extends AppCompatActivity {
         src.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
-                String msg  =number.get(index);
+                is.setIdp(number.get(index));
                 Intent intent = new Intent();
                 intent.setClass(Search_Activity.this,Detail_Activity.class);
                 startActivity(intent);
@@ -104,6 +105,7 @@ public class Search_Activity extends AppCompatActivity {
         }catch (Exception e) {
             Toast.makeText(Search_Activity.this,e.getMessage().toString(), Toast.LENGTH_LONG).show();
         }
+
     }
 }
 

@@ -4,6 +4,7 @@ import android.app.Application;
 
 
 public class Insert extends Application {
+    String idp;
     String id;
     String date;
     String day;
@@ -13,6 +14,8 @@ public class Insert extends Application {
     String place;
     String classs;
     String msg;
+    String sql = "SELECT *  FROM Detail ";
+    int passid;
 
     public String getId() {
         return id;
@@ -86,27 +89,27 @@ public class Insert extends Application {
         this.msg = msg;
     }
 
-    public void insertsql(
-            String id,
-            String date,
-            String day,
-            String user,
-            String floor,
-            String time,
-            String place,
-            String classs,
-            String msg
-    ){
-        ConnectionClass connectionClass =new ConnectionClass();
-        this.id = id;
-        this.date = date;
-        this.day = day;
-        this.user = user;
-        this.floor = floor;
-        this.time = time;
-        this.place = place;
-        this.classs =classs;
-        this.msg = msg;
-        //sfghgfd
+    public String getSql() {
+        return sql;
+    }
+
+    public void setSql(String sql) {
+        this.sql = sql;
+    }
+
+    public int getPassid() {
+        return passid;
+    }
+
+    public void setPassid(int passid) {
+        this.passid = passid;
+    }
+
+    public String getIdp() {
+        return idp;
+    }
+
+    public void setIdp(String idp) {
+        this.idp = idp;
     }
 }

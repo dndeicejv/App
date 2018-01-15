@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Hyper_Activity extends AppCompatActivity {
 
@@ -12,11 +13,11 @@ public class Hyper_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hyper_);
-        final GlobalVariable gv = (GlobalVariable)getApplicationContext();
+        final  Insert is = (Insert) getApplicationContext();
 
-                Button user_btn =(Button)findViewById(R.id.user_btn);
-                Button search_btn = (Button)findViewById(R.id.search_btn);
-                Button new_btn = (Button)findViewById(R.id.neww_btn);
+        ImageButton user_btn =(ImageButton)findViewById(R.id.user_btn);
+        ImageButton search_btn = (ImageButton)findViewById(R.id.search_btn);
+        ImageButton new_btn = (ImageButton)findViewById(R.id.neww_btn);
 
         user_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +30,7 @@ public class Hyper_Activity extends AppCompatActivity {
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gv.setsql("SELECT *  FROM Detail");
+                is.setSql("SELECT *  FROM Detail order by 日期 DESC");
                 Intent intent = new Intent();
                 intent.setClass(Hyper_Activity.this,Search_Activity.class);
                 startActivity(intent);
@@ -40,7 +41,7 @@ public class Hyper_Activity extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Hyper_Activity.this,New_Activity.class);
+                intent.setClass(Hyper_Activity.this,InsertActivity.class);
                 startActivity(intent);
             }
         });

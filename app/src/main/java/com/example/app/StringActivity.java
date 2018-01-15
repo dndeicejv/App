@@ -27,7 +27,7 @@ public class StringActivity extends AppCompatActivity {
         final DatePicker datePicker = (DatePicker)findViewById(R.id.datepicker);
         Button button = (Button)findViewById(R.id.btn);
         ConnectionClass connectionClass = new ConnectionClass();
-        final GlobalVariable gv = (GlobalVariable)getApplicationContext();
+        final  Insert is = (Insert) getApplicationContext();
         Function f = new Function();
         final ArrayList<String> arrayList = f.setlist(connectionClass,"Floor",StringActivity.this,"F_Name");
         final ArrayList<String> arrayList1 = f.setlist(connectionClass,"Floor",StringActivity.this,"F_dbo");
@@ -39,7 +39,7 @@ public class StringActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                if (!arrayList.get(position).toString().equals(" ")) {
-                   gv.setfloor(arrayList.get(position).toString());
+                   is.setFloor(parent.getSelectedItem().toString());
                    ConnectionClass connectionClass = new ConnectionClass();
                    Function f = new Function();
                    arrayList2 = f.setlist(connectionClass,arrayList1.get(position),StringActivity.this,"位置");
@@ -58,9 +58,7 @@ public class StringActivity extends AppCompatActivity {
         place.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (!arrayList.get(position).toString().equals(" ")) {
-                    gv.setplace(arrayList2.get(position).toString());
-                }
+                    is.setPlace(parent.getSelectedItem().toString());
             }
 
             @Override
@@ -74,8 +72,8 @@ public class StringActivity extends AppCompatActivity {
                 int year = datePicker.getYear();
                 int month = datePicker.getMonth()+1;
                 int day = datePicker.getDayOfMonth();
-                String cdate = year + "-" + month + "-" + day;
-                gv.setsql("SELECT *  FROM Detail Where 日期 = '"+cdate+"' and 樓層 = '"+gv.getfloor()+"'");
+                String cdate = Integer.toString(year) + "-" + String.format("%02d",month) + "-" + String.format("%02d",day);
+                is.setSql("SELECT *  FROM Detail WHERE 日期 = '" +cdate+"' and 樓層 = '" + is.getFloor()+"' and 位置 = '"+is.getPlace()+"'order by 日期 DESC");
 
                 Intent intent  =new Intent();
                 intent.setClass(StringActivity.this,Search_Activity.class);
