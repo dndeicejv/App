@@ -28,7 +28,7 @@ public class InsertActivity extends AppCompatActivity {
         final Spinner place  = (Spinner)findViewById(R.id.placespin);
         Spinner event  = (Spinner)findViewById(R.id.eventspin);
 
-        final ArrayList<String> dbolist = f.setlist(connectionClass,"Floor",InsertActivity.this,"F_dbo");
+        final ArrayList<String> dbolist = f.setlist(InsertActivity.this,"Floor","F_dbo");
         ArrayAdapter<String> flooradapter = f.setspinner(InsertActivity.this,"Floor","F_Name");
         floor.setAdapter(flooradapter);
         ArrayAdapter<String> eventadapter  =f.setspinner(InsertActivity.this,"Event","類型名稱");

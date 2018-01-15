@@ -31,8 +31,9 @@ public class User_Activity extends AppCompatActivity {
         TextView name = (TextView)findViewById(R.id.Name);
         TextView department = (TextView)findViewById(R.id.department);
         TextView tel = (TextView)findViewById(R.id.tel);
+        TextView time = (TextView)findViewById(R.id.logintime);
 
-
+        time.setText(is.getLogin());
         try{
 
             Connection con =  connectionClass.CONN();
@@ -54,6 +55,7 @@ public class User_Activity extends AppCompatActivity {
                     message  ="Invalid Credentials";
                 }
             }
+
         }catch (Exception e) {
             message = e.getMessage().toString();
             Toast.makeText(User_Activity.this,message, Toast.LENGTH_LONG).show();
@@ -67,6 +69,14 @@ public class User_Activity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(User_Activity.this,LoginActivity.class);
                 startActivity(intent);
+                User_Activity.this.finish();
+            }
+        });
+        Button back_btn = (Button)findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 User_Activity.this.finish();
             }
         });

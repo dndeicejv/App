@@ -4,6 +4,7 @@ import android.app.Application;
 
 
 public class Insert extends Application {
+    String login;
     String idp;
     String id;
     String date;
@@ -111,5 +112,13 @@ public class Insert extends Application {
 
     public void setIdp(String idp) {
         this.idp = idp;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 }

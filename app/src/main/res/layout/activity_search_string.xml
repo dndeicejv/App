@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.app.SearchString"
+    android:orientation="vertical"
+    >
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="請選擇搜尋方式"
+        android:textSize="25dp"
+        android:id="@+id/src"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="372dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/datelayout"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="請輸入起始時間"
+                android:textSize="25dp"
+                />
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:id="@+id/datepicker1"
+                >
+            </DatePicker>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="請輸入結束時間"
+                android:textSize="25dp"
+                />
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:id="@+id/datepicker2"
+                >
+            </DatePicker>
+
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/placelayout"
+        >
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="請選擇樓層"
+            android:textSize="25dp"
+            />
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:id="@+id/spinner1"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="請選擇位置"
+            android:textSize="25dp"
+            />
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:id="@+id/spinner2"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/idlayout"
+        >
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textSize="25dp"
+            android:text="請輸入編號"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/edittext1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/emptylayout"
+        >
+    </LinearLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:textSize="25dp"
+        android:text="確   認"
+        android:id="@+id/yes"
+        />
+
+
+</LinearLayout>

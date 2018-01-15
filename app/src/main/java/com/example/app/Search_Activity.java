@@ -54,7 +54,7 @@ public class Search_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent  =new Intent();
-                intent.setClass(Search_Activity.this,StringActivity.class);
+                intent.setClass(Search_Activity.this,SearchString.class);
                 startActivity(intent);
                 Search_Activity.this.finish();
 

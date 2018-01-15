@@ -23,7 +23,9 @@ import java.util.List;
 public class Function {
 
 
-    public ArrayList<String> setlist(ConnectionClass connectionClass, String dbo, Activity activity,String column){
+    public ArrayList<String> setlist( Activity activity,String dbo, String column){
+
+        ConnectionClass connectionClass = new ConnectionClass();
         ArrayList<String> arrayList = new ArrayList<String>();
     try{
         Connection con =  connectionClass.CONN();
