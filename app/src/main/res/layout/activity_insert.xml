@@ -10,10 +10,10 @@
     >
     <TextView
         android:id="@+id/textView"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:textSize="30dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:textSize="50dp"
+        android:layout_marginLeft="30dp"
         android:text="樓層"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         />
@@ -21,16 +21,16 @@
 
     <Spinner
         android:id="@+id/floorspin"
-        android:layout_width="300dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="450dp"
+        android:layout_height="69dp"
+        android:layout_marginLeft="30dp"
         />
     <TextView
         android:id="@+id/txt1"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:textSize="30dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:textSize="50dp"
+        android:layout_marginLeft="30dp"
         android:text="位置"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         />
@@ -38,16 +38,16 @@
 
     <Spinner
         android:id="@+id/placespin"
-        android:layout_width="300dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="450dp"
+        android:layout_height="69dp"
+        android:layout_marginLeft="30dp"
         />
     <TextView
         android:id="@+id/txt2"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:textSize="30dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:textSize="50dp"
+        android:layout_marginLeft="30dp"
         android:text="事件類型"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         />
@@ -55,19 +55,19 @@
 
     <Spinner
         android:id="@+id/eventspin"
-        android:layout_width="300dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="450dp"
+        android:layout_height="69dp"
+        android:layout_marginLeft="30dp"
         android:descendantFocusability="blocksDescendants"
         android:focusable="false"
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="wrap_content">
         <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="117dp"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="178dp"
             android:id="@+id/qr"
             android:background="@drawable/scanbtn"
             />
@@ -81,8 +81,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/quit_btn"
-            android:textSize="20dp"
-            android:text="返回"
+            android:textSize="40dp"
+            android:text="返 回"
             />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/next_btn"
-            android:textSize="20dp"
+            android:textSize="40dp"
             android:text="下一頁"
             />
     </LinearLayout>

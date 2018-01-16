@@ -13,6 +13,10 @@ public class Hyper_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hyper_);
+
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+
         final  Insert is = (Insert) getApplicationContext();
 
         ImageButton user_btn =(ImageButton)findViewById(R.id.user_btn);
@@ -30,7 +34,7 @@ public class Hyper_Activity extends AppCompatActivity {
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                is.setSql("SELECT *  FROM Detail order by 日期 DESC");
+                is.setSql("SELECT  TOP(20) *  FROM Detail order by 日期 DESC");
                 Intent intent = new Intent();
                 intent.setClass(Hyper_Activity.this,Search_Activity.class);
                 startActivity(intent);

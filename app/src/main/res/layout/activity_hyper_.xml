@@ -10,33 +10,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
     >
         <ImageButton
             android:id="@+id/search_btn"
-            android:layout_width="150dp"
+            android:layout_width="275dp"
             android:layout_height="150dp"
             android:layout_gravity="right"
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/search"
-           />
+            android:layout_weight="1"
+            />
+
 
         <ImageButton
             android:id="@+id/neww_btn"
-            android:layout_width="150dp"
+            android:layout_width="275dp"
             android:layout_height="150dp"
             android:layout_gravity="left"
             android:layout_marginLeft="30dp"
             android:background="@drawable/insert"
+            android:layout_weight="1"
             />
 
          <ImageButton
             android:id="@+id/user_btn"
-             android:layout_width="150dp"
+             android:layout_width="275dp"
              android:layout_height="150dp"
             android:layout_gravity="right"
              android:layout_marginRight="30dp"
             android:background="@drawable/user"
+             android:layout_weight="1"
         />
 </LinearLayout>
 

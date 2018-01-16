@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.app.LoginActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,8 +28,8 @@
             </LinearLayout>
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:src="@drawable/logo"
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="新光醫院"
-                android:textSize="36dp"
+                android:textSize="48dp"
                 />
 
             <TextView
@@ -63,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="為您服務行動查核系統"
-                android:textSize="24dp"
+                android:textSize="36dp"
                 />
 
         </LinearLayout>
@@ -81,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:layout_gravity="center"
             android:text="帳號"
             />
@@ -112,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:text="密碼"
                  />
             <EditText
@@ -138,8 +139,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="23dp"
-            android:text="掃描"
+            android:textSize="40dp"
+            android:text="掃  描"
             />
 
         <Button
@@ -147,8 +148,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="23dp"
-            android:text="登入"
+            android:textSize="40dp"
+            android:text="登  入"
             />
 
     </LinearLayout>

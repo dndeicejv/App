@@ -13,6 +13,10 @@ public class Lower_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lower_);
+
+        getSupportActionBar().hide();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+
         final  Insert is = (Insert) getApplicationContext();
 
         ImageButton user_btn =(ImageButton) findViewById(R.id.lubtn);

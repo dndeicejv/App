@@ -15,7 +15,7 @@ public class Insert extends Application {
     String place;
     String classs;
     String msg;
-    String sql = "SELECT *  FROM Detail ";
+    String sql = " ";
     int passid;
 
     public String getId() {

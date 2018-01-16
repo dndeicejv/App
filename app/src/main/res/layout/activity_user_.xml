@@ -21,14 +21,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="姓名:"
-            android:textSize="30dp"
+            android:textSize="50dp"
             />
         <TextView
             android:id="@+id/Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="30dp"
+            android:textSize="50dp"
             />
 
     </LinearLayout>
@@ -48,14 +48,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="分機:"
-            android:textSize="20dp"
+            android:textSize="35dp"
             />
         <TextView
             android:id="@+id/tel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="20dp"
+            android:textSize="35dp"
             />
 
     </LinearLayout>
@@ -73,21 +73,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="部門:"
-            android:textSize="20dp"
+            android:textSize="35dp"
             />
         <TextView
             android:id="@+id/department"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="20dp"
+            android:textSize="35dp"
             />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="260dp">
+        android:layout_height="450dp">
 
     </LinearLayout>
     <LinearLayout
@@ -103,32 +103,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登入時間:"
-        android:textSize="15dp"
+        android:textSize="25dp"
         />
     <TextView
         android:id="@+id/logintime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="15dp"
+        android:textSize="25dp"
         />
 
 </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="90dp"
         android:orientation="horizontal"
         >
         <Button
             android:id="@+id/back_btn"
-            android:layout_width="125dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:text="返 回"
-            android:textSize="30dp"
+            android:textSize="50dp"
             android:layout_marginLeft="2dp"
             />
         <LinearLayout
-            android:layout_width="128dp"
+            android:layout_width="236dp"
             android:layout_height="wrap_content"
 
             >
@@ -137,11 +137,11 @@
 
         <Button
             android:id="@+id/logout_btn"
-            android:layout_width="125dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:layout_marginRight="2dp"
             android:text="登 出"
-            android:textSize="30dp"
+            android:textSize="50dp"
             />
     </LinearLayout>
 

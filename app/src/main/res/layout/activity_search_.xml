@@ -11,8 +11,9 @@
     <ListView
         android:id="@+id/src_list"
         android:layout_width="match_parent"
-        android:layout_height="466dp"
-
+        android:layout_height="750dp"
+        android:background="@drawable/list_btn"
+        android:cacheColorHint="@drawable/list_btn_click"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +27,7 @@
             android:id="@+id/quit"
             android:layout_weight="1"
             android:text="返回"
-            android:textSize="22dp"
+            android:textSize="46dp"
             />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,7 +42,7 @@
             android:id="@+id/next"
             android:layout_weight="1"
             android:text="搜尋"
-            android:textSize="22dp"
+            android:textSize="46dp"
             />
 
     </LinearLayout>
