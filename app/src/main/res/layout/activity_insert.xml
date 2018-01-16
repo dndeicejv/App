@@ -64,7 +64,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp">
-
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="117dp"
+            android:id="@+id/qr"
+            android:background="@drawable/scanbtn"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
